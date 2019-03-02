@@ -5,12 +5,26 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {createStore} from "redux";
 
-const reducer = () => {
+//reducer는 순수 함수다.
+const reducer = (state, action) => {
+  console.log(state, action);
   return 'State'
 }
-const store = createStore(reducer); // redux를 store안에 넣어줘야한다..
 
-console.log(store, store.getState());
+// reducer를 createStore함수 안에 넣어주면서 store를 생성한다.
+const store = createStore(reducer);
+
+// console.log(store, store.getState());
+
+// action은 객체다.
+const action = {
+  type: 'changeState',
+  payload: {
+    newState: 'New State'
+  }
+}
+// dispatch안에 action을 넣어준다. action을 dispatch해준다. -> reducer가 실행된다
+store.dispatch(action);
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
