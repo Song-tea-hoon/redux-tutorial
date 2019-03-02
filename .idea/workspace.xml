@@ -28,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="13" column="16" lean-forward="true" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+            <state relative-caret-position="304">
+              <caret line="40" column="19" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="19" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -130,7 +130,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1551509884414</updated>
-      <workItem from="1551509885958" duration="2564000" />
+      <workItem from="1551509885958" duration="3820000" />
     </task>
     <task id="LOCAL-00001" summary="redux start">
       <created>1551510055794</created>
@@ -167,15 +167,21 @@
       <option name="project" value="LOCAL" />
       <updated>1551511693154</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="redux devtools chrome">
+      <created>1551512706902</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1551512706902</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2564000" />
+    <option name="totallyTimeSpent" value="3820000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="npm" sideWeight="0.50161815" side_tool="true" weight="0.24973656" />
       <window_info id="Favorites" side_tool="true" />
@@ -205,7 +211,8 @@
     <MESSAGE value="store생성 및 redux등록, state조회" />
     <MESSAGE value="action dispatch" />
     <MESSAGE value="subscribe" />
-    <option name="LAST_COMMIT_MESSAGE" value="subscribe" />
+    <MESSAGE value="redux devtools chrome" />
+    <option name="LAST_COMMIT_MESSAGE" value="redux devtools chrome" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -217,8 +224,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="13" column="16" lean-forward="true" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+        <state relative-caret-position="304">
+          <caret line="40" column="19" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="19" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
