@@ -5,24 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {combineReducers, createStore} from "redux";
 import {Provider} from "react-redux";
-
-//reducer는 순수 함수다. -> 이후에 코드가 집중 되는곳
-// 다중 reducer -> state가 key:value 쌍으로 바뀐다.
-const productReducer = (state = [], action) => {
-  return state;
-}
-
-const userReducer = (state = '', action) => {
-  switch (action.type) {
-    case 'updateUser':
-      return action.payload;
-    case 'addUser':
-      return 'addUser'
-  }
-  return state;
-}
-
-const allReducer =  combineReducers({productReducer, userReducer})
+import {allReducer} from "./redux/reducers"; // reducers.js를 찾고 없으면 reducers/index.js파일을 찾는다.
 
 // 1.초기화 reducer를 createStore함수 안에 넣어주면서 store를 생성한다.
 // chrome reduxdev tool용 script추가
