@@ -10,7 +10,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <p>{this.props.username.user}</p>
-          <button onClick={() => this.props.modifyUser('kim')}>KIM</button>
+          <button onClick={() => this.props.updateUser('kim')}>KIM</button>
         </header>
       </div>
     );
@@ -25,10 +25,10 @@ const mapStateToProps = (state) => ({
 });
 
 // props에 action을 dispath하는 function을 내려받는다.
-const mapActionToProps = (dispatch) => ({
-  modifyUser: (name) => dispatch(updateUser(name))
-})
+// const mapActionToProps = (dispatch) => ({
+//   modifyUser: (name) => dispatch(updateUser(name))
+// })
 
 // connect 함수를 통해  props에다가 store를 연결
-export default connect(mapStateToProps, mapActionToProps)(App);
+export default connect(mapStateToProps, {updateUser})(App);
 // export default App;
