@@ -3,36 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import {combineReducers, createStore} from "redux";
 import {Provider} from "react-redux";
-import {allReducer} from "./redux/reducers"; // reducers.js를 찾고 없으면 reducers/index.js파일을 찾는다.
+import {store} from "./redux/store"; // store.js를 찾고 없으면 store/index.js파일을 찾는다.
 
-// 1.초기화 reducer를 createStore함수 안에 넣어주면서 store를 생성한다.
-// chrome reduxdev tool용 script추가
-const store = createStore(allReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
-
-// console.log(store, store.getState());
-
-// action은 객체다.
-const action = {
-  type: 'changeState',
-  payload: {
-    newState: 'New State'
-  }
-}
-
-const updateUserAction = {
-  type: 'updateUser',
-  payload: {user: 'Tom'}
-}
-
-// 2. 가입 -> 액션이 실행되어 값이 변하면 자동으로 구독한다.
-store.subscribe(() => console.log(store.getState()))
-// 3. 액션 디스패치 :
-// dispatch안에 action을 넣어준다.
-// 새로운 state, action을 dispatch해준다.
-// -> reducer가 실행된다
-store.dispatch(updateUserAction);
 
 // HOC방식으로 app을 감싸서 store를 바인딩
 ReactDOM.render(<Provider store={store}><App/></Provider>, document.getElementById('root'));
