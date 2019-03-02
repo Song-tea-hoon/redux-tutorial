@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import {connect} from "react-redux";
+import {updateUser} from "./redux/actions";
 
 class App extends Component {
   render() {
@@ -9,6 +10,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <p>{this.props.username.user}</p>
+          <button onClick={() => this.props.modifyUser('kim')}>KIM</button>
         </header>
       </div>
     );
@@ -22,6 +24,11 @@ const mapStateToProps = (state) => ({
   username: state.userReducer
 });
 
+// props에 action을 dispath하는 function을 내려받는다.
+const mapActionToProps = (dispatch) => ({
+  modifyUser: (name) => dispatch(updateUser(name))
+})
+
 // connect 함수를 통해  props에다가 store를 연결
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, mapActionToProps)(App);
 // export default App;
