@@ -5,7 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {createStore} from "redux";
 
-//reducer는 순수 함수다.
+//reducer는 순수 함수다. -> 이후에 코드가 집중 되는곳...
 const reducer = (state, action) => {
   console.log(state, action)
   if(action.type == 'changeState') {
