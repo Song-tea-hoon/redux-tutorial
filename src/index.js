@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {combineReducers, createStore} from "redux";
+import {Provider} from "react-redux";
 
 //reducer는 순수 함수다. -> 이후에 코드가 집중 되는곳
 // 다중 reducer -> state가 key:value 쌍으로 바뀐다.
@@ -50,7 +51,8 @@ store.subscribe(() => console.log(store.getState()))
 // -> reducer가 실행된다
 store.dispatch(updateUserAction);
 
-ReactDOM.render(<App/>, document.getElementById('root'));
+// HOC방식으로 app을 감싸서 store를 바인딩
+ReactDOM.render(<Provider store={store}><App/></Provider>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
