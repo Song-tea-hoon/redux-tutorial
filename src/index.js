@@ -15,7 +15,8 @@ const reducer = (state, action) => {
 }
 
 // 1.초기화 reducer를 createStore함수 안에 넣어주면서 store를 생성한다.
-const store = createStore(reducer);
+// chrome reduxdev tool용 script추가
+const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 // console.log(store, store.getState());
 
@@ -27,10 +28,11 @@ const action = {
   }
 }
 
-// 2. 가입
+// 2. 가입 -> 액션이 실행되어 값이 변하면 자동으로 구독한다.
 store.subscribe(() => console.log(store.getState()))
-
-// 3. 액션 디스패치 : dispatch안에 action을 넣어준다. action을 dispatch해준다.
+// 3. 액션 디스패치 :
+// dispatch안에 action을 넣어준다.
+// 새로운 state, action을 dispatch해준다.
 // -> reducer가 실행된다
 store.dispatch(action);
 
